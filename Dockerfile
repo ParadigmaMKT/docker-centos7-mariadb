@@ -13,8 +13,6 @@ RUN yum -y install --setopt=tsflags=nodocs epel-release && \
 
 ADD my.cnf /etc/my.cnf
 
-RUN chmod 777 -R /var/lib/mysql
-
 COPY docker-entrypoint.sh /
 
 RUN chmod +x /docker-entrypoint.sh
